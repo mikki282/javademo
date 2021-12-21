@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build'){
+            steps{
+                bat 'javac mikki.java'
+            }
+        }
+        stage('Test'){
+            steps{
+                bat 'java mikki'
+            }
+        }
+    }
+}
